@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Warren's Calculator</title>
+        <link rel="stylesheet" type="text/css" href="layout.css">
+        
+    </head>
+    <body>
+        <H1>This is my calculator</H1>
+        <div id ="container">
+            <div id = "screen">0</div>
+        </div>
+        <script>
+            const buttons = ["CE", "/","*","-","+","=",".","0"];
+            const container = document.querySelector('#container');
+            
+            for(x=0; x<4; x++){
+                for(y=0; y<4; y++){
+                    var div = document.createElement('div');
+                    if(x==0){
+                        div.textContent = buttons[y];
+                        div.classList.add(buttons[y]);
+                        div.setAttribute("id",buttons[y]);
+                    }
+                    if(x>0&&y<3){
+                        div.textContent = x*-3+10 + y;
+                        div.classList.add( x*-3+10 + y);
+                        div.setAttribute("id", x*-3+10 + y);
+                    }
+                    if( x > 0 && y==3){
+                        div.textContent = buttons[x+3];
+                        div.classList.add(buttons[x+3]);
+                        div.setAttribute("id",buttons[x+3])
+                    }
+                    
+                    div.classList.add('key');
+                    container.appendChild(div);
+                }
+            }
+        </script>
+    </body>
+    <script src="calcs.js"></script>
+</html>

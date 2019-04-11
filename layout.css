@@ -1,0 +1,21 @@
+.key{
+    display:inline-block;
+    vertical-align:top;
+    width:90px;
+    height:90px;
+    background-color: #d8d8d8;
+    BORDER: #e4e4e4;
+    BORDER-WIDTH: medium;
+    border-style: outset;
+    text-align: center;
+}
+
+#container{
+    width: 390px;
+    margin-right:auto;
+    margin-left:auto;
+    display:block;
+}
+input{
+    width:100%;
+}
